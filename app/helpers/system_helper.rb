@@ -1,5 +1,5 @@
 module SystemHelper
   def self.execute_command(command)
-    system command
+    exec command
   end
 end
