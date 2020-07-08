@@ -1,5 +1,6 @@
 class MessageBoardsController < ApplicationController
   def display_message
-    render json: { message: params.require(:message) }
+    MessageBoardHelper.display_message(params.require(:message))
+    render :nothing => true, :status => 204
   end
 end
