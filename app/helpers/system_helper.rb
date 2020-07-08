@@ -1,7 +1,5 @@
-class SystemHelper
-  class << self
-    def execute_command(command)
-      system command
-    end
+module SystemHelper
+  def self.execute_command(command)
+    system command
   end
 end
