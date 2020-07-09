@@ -1,5 +1,5 @@
 module SystemHelper
   def self.execute_command(command)
-    exec command
+    Process.fork { system command }
   end
 end
