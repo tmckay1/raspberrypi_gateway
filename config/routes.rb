@@ -4,4 +4,10 @@ Rails.application.routes.draw do
       post :display_message
     end
   end
+
+  resources :score_boards, only: [] do
+    collection do
+      post :change_score
+    end
+  end
 end
