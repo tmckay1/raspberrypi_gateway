@@ -1,4 +1,4 @@
-class BestFriendLightController < ApplicationController
+class BestFriendLightsController < ApplicationController
   def get_color_index
     render json: { color_index: BestFriendLightHelper.instance.color_index }
   end
