@@ -10,7 +10,25 @@ This app is made with ruby on rails has a simple actions that are coupled with o
 3. Best Friend Lamps - Acts as the source of truth for the best friend lamps, and keeps track of the current color.
 
 ## Installation
-You will need to install a ruby version manager (either rvm or rbenv), you can look at docs online for that it is a simple install. Once you've installed one of them, just download/clone this repo and install the latest ruby version with your version manager through the .ruby-version specification. So if you are using `rvm` for example, you can type `rvm install` to install the latest ruby version. After install run `bundle install` to install all gem dependencies. 
+You will need to install a ruby version manager (I use rvm), you can look at docs online for that it is a simple install: https://rvm.io/rvm/install. As of when this was written the command is:
+```
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+```
+Once you've installed rvm, just download/clone this repo and install the latest ruby version with your version manager through the .ruby-version specification.
+```
+git clone https://github.com/tmckay1/raspberrypi_gateway.git
+```
+So if you are using `rvm` for example, you can type `rvm install` to install the latest ruby version. Make sure to enter a new bash shell for this.
+```
+bash
+rvm install 2.5.1
+```
+After install run `bundle install` to install all gem dependencies.
+```
+cd raspberrypi_gateway
+bundle install
+bin/rails server -b 0.0.0.0
+```
 
 ## Starting the server
 To start the server run `bin/rails server -b 0.0.0.0`and a rails server will be open at port 3000. To write a message to the screen go to `http://<YOUR PI'S IP ADDRESS>/message_boards/display_message/?message=<MESSAGE YOU WANT HERE>`
