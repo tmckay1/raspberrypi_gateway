@@ -36,3 +36,8 @@ To start the server run `bin/rails server -b 0.0.0.0`and a rails server will be 
 To set the current color for the best friend lamp go to `http://<YOUR PI'S IP ADDRESS>/message_boards/best_friend_lights/get_color_index/`
 
 To get the current color for the best friend lamp go to `http://<YOUR PI'S IP ADDRESS>/message_boards/best_friend_lights/set_color_index/?color_index=<INDEX HERE>`
+
+You can start the server automatically on boot by adding a line similar to this in `/etc/rc.local`
+```
+runuser -l pi -c "source /home/pi/.rvm/scripts/rvm ; cd /home/pi/scripts/raspberrypi_gateway/ ; /home/pi/.rvm/gems/ruby-2.5.1/bin/rails server -b 0.0.0.0 -d"
+```
